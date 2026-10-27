@@ -96,6 +96,14 @@ export default function Header() {
           >
             Iniciar Sesión
           </NavLink>
+           <NavLink 
+            to="/rickandmorty" 
+            className="btn fw-bold text-dark text-nowrap border-0 shadow-sm py-1 px-3"
+            style={{ backgroundColor: '#D4AF37' }}
+          >
+            Api
+          </NavLink>
+
 
         </div>
       </nav>
