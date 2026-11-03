@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ProductCard } from './ProductCard'
+import { ProductCard } from '../../auth/components/ProductCard' // Ajustado según tu estructura de carpetas
 
 export const Main = () => {
-  // Arreglo de objetos con las imágenes ya optimizadas para Lighthouse
   const productos = [
     {
       id: 1,
@@ -57,14 +56,14 @@ export const Main = () => {
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                 <a 
                   href="#catalogo" 
-                  className="btn btn-lg fw-bold text-dark px-4 py-3 rounded-2 border-0 shadow-sm"
+                  className="btn btn-lg fw-bold text-dark px-4 py-3 rounded-2 border-0 shadow-sm text-decoration-none"
                   style={{ backgroundColor: '#D4AF37' }}
                 >
                   Explorar Colección
                 </a>
                 <Link 
                   to="/inversion" 
-                  className="btn btn-lg btn-outline-dark px-4 py-3 rounded-2 fw-semibold"
+                  className="btn btn-lg btn-outline-dark px-4 py-3 rounded-2 fw-semibold text-decoration-none"
                 >
                   Oro de Inversión
                 </Link>
@@ -72,13 +71,18 @@ export const Main = () => {
             </div>
 
             <div className="col-lg-6 text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=70" 
-                alt="Joyería de oro fino"
-                className="img-fluid rounded-4 shadow-lg border"
-                style={{ maxHeight: '420px', objectFit: 'cover' }}
-                loading="eager"
-              />
+              <div className="position-relative d-inline-block w-100" style={{ maxWidth: '600px' }}>
+                <img 
+                  src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=70" 
+                  alt="Joyería de oro fino"
+                  className="img-fluid rounded-4 shadow-lg border w-100"
+                  style={{ height: '420px', objectFit: 'cover' }}
+                  width="600"
+                  height="420"
+                  fetchPriority="high"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -90,9 +94,9 @@ export const Main = () => {
           <div className="row g-4 text-center text-md-start">
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">🛡️</span>
+                <span className="fs-2" role="img" aria-label="Escudo">🛡️</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Autenticidad Garantizada</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Autenticidad Garantizada</h2>
                   <small className="text-muted d-block">Certificado oficial en cada compra</small>
                 </div>
               </div>
@@ -100,9 +104,9 @@ export const Main = () => {
 
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">🚚</span>
+                <span className="fs-2" role="img" aria-label="Camión">🚚</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Envíos Asegurados</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Envíos Asegurados</h2>
                   <small className="text-muted d-block">Entrega blindada a todo el país</small>
                 </div>
               </div>
@@ -110,9 +114,9 @@ export const Main = () => {
 
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">💎</span>
+                <span className="fs-2" role="img" aria-label="Diamante">💎</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Atención Personalizada</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Atención Personalizada</h2>
                   <small className="text-muted d-block">Asesoría con expertos orfebres</small>
                 </div>
               </div>

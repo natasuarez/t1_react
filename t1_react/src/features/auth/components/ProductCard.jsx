@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Recibimos las props mediante desestructuración ({ imagen, titulo, descripcion, precio, pureza })
 export const ProductCard = ({ imagen, titulo, descripcion, precio, pureza }) => {
   return (
     <div className="col-md-4">
@@ -10,6 +9,9 @@ export const ProductCard = ({ imagen, titulo, descripcion, precio, pureza }) => 
             src={imagen} 
             alt={titulo}
             className="w-100 h-100 object-fit-cover"
+            width="400"
+            height="260"
+            loading="lazy"
           />
           <span 
             className="position-absolute top-0 end-0 text-dark badge m-3 fw-bold rounded-2 px-3 py-2"
@@ -19,7 +21,7 @@ export const ProductCard = ({ imagen, titulo, descripcion, precio, pureza }) => 
           </span>
         </div>
         <div className="card-body p-4 d-flex flex-column text-center">
-          <h5 className="card-title fw-bold text-dark mb-2">{titulo}</h5>
+          <h3 className="card-title h5 fw-bold text-dark mb-2">{titulo}</h3>
           <p className="card-text text-muted small flex-grow-1">
             {descripcion}
           </p>

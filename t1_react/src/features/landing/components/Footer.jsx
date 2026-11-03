@@ -12,31 +12,31 @@ export const Footer = () => {
             <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
               <span className="fs-5" role="img" aria-label="Corona">👑</span>
               <span className="fw-bold text-dark fs-5 tracking-wide">AUREUM</span>
-              <span className="text-muted small">| Fine Gold</span>
+              <span className="text-dark opacity-75 small">| Fine Gold</span>
             </Link>
           </div>
 
-          {/* Menú de enlaces rápidos */}
+          {/* Menú de enlaces rápidos con mayor contraste */}
           <div className="col-md-4 text-center">
             <ul className="list-inline mb-0 small">
               <li className="list-inline-item mx-2">
-                <Link to="/" className="text-secondary text-decoration-none">Inicio</Link>
+                <Link to="/" className="text-dark fw-medium text-decoration-none">Inicio</Link>
               </li>
               <li className="list-inline-item mx-2">
-                <Link to="/cadenas" className="text-secondary text-decoration-none">Cadenas</Link>
+                <Link to="/cadenas" className="text-dark fw-medium text-decoration-none">Cadenas</Link>
               </li>
               <li className="list-inline-item mx-2">
-                <Link to="/anillos" className="text-secondary text-decoration-none">Anillos</Link>
+                <Link to="/anillos" className="text-dark fw-medium text-decoration-none">Anillos</Link>
               </li>
               <li className="list-inline-item mx-2">
-                <Link to="/inversion" className="text-secondary text-decoration-none">Inversión</Link>
+                <Link to="/inversion" className="text-dark fw-medium text-decoration-none">Inversión</Link>
               </li>
             </ul>
           </div>
 
-          {/* Copyright y Derechos */}
+          {/* Copyright y Derechos con alto contraste */}
           <div className="col-md-4 text-center text-md-end">
-            <span className="text-muted small">
+            <span className="text-dark opacity-75 small">
               © {new Date().getFullYear()} AUREUM. Todos los derechos reservados.
             </span>
           </div>
