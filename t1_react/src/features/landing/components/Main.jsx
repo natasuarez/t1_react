@@ -5,11 +5,12 @@ export const Main = () => {
   return (
     <main className="bg-light text-dark min-vh-100">
 
-      {/* 1. HERO BANNER PRINCIPAL (Fondo claro, texto oscuro de alto contraste) */}
+      {/* HERO BANNER PRINCIPAL */}
       <section className="bg-white border-bottom py-5">
         <div className="container py-4">
           <div className="row align-items-center g-5">
-            {/* Texto explicativo (Columna Izquierda) */}
+            
+            {/* Texto explicativo */}
             <div className="col-lg-6 text-center text-lg-start">
               <span 
                 className="badge text-dark fw-bold mb-3 px-3 py-2 text-uppercase"
@@ -29,75 +30,75 @@ export const Main = () => {
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                 <a 
                   href="#catalogo" 
-                  className="btn btn-lg fw-bold text-dark px-4 py-3 rounded-2 border-0 shadow-sm"
+                  className="btn btn-lg fw-bold text-dark px-4 py-3 rounded-2 border-0 shadow-sm text-decoration-none"
                   style={{ backgroundColor: '#D4AF37' }}
                 >
                   Explorar Colección
                 </a>
                 <Link 
                   to="/inversion" 
-                  className="btn btn-lg btn-outline-dark px-4 py-3 rounded-2 fw-semibold"
+                  className="btn btn-lg btn-outline-dark px-4 py-3 rounded-2 fw-semibold text-decoration-none"
                 >
                   Oro de Inversión
                 </Link>
               </div>
             </div>
 
-            {/* Imagen Destacada de Producto (Columna Derecha) */}
+            {/* Imagen Destacada del LCP con dimensiones explícitas para evitar CLS */}
             <div className="col-lg-6 text-center">
-              <div className="position-relative d-inline-block">
+              <div className="position-relative d-inline-block w-100" style={{ maxWidth: '500px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" 
-                  alt="Joyería de oro fino"
-                  className="img-fluid rounded-4 shadow-lg border"
-                  style={{ maxHeight: '420px', objectFit: 'cover' }}
+                  alt="Joyería de oro fino y collares elegantes"
+                  className="img-fluid rounded-4 shadow-lg border w-100"
+                  style={{ height: '420px', objectFit: 'cover' }}
+                  width="800"
+                  height="420"
+                  fetchPriority="high"
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* 2. CINTA DE BENEFICIOS (Organizados perfectamente en 3 columnas horizontales) */}
+      {/* CINTA DE BENEFICIOS */}
       <section className="py-4 bg-white border-bottom shadow-sm">
         <div className="container">
           <div className="row g-4 text-center text-md-start">
-            
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">🛡️</span>
+                <span className="fs-2" role="img" aria-label="Escudo">🛡️</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Autenticidad Garantizada</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Autenticidad Garantizada</h2>
                   <small className="text-muted d-block">Certificado oficial en cada compra</small>
                 </div>
               </div>
             </div>
-
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">🚚</span>
+                <span className="fs-2" role="img" aria-label="Camión">🚚</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Envíos Asegurados</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Envíos Asegurados</h2>
                   <small className="text-muted d-block">Entrega blindada a todo el país</small>
                 </div>
               </div>
             </div>
-
             <div className="col-md-4">
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-3 p-2">
-                <span className="fs-2">💎</span>
+                <span className="fs-2" role="img" aria-label="Diamante">💎</span>
                 <div>
-                  <h6 className="fw-bold mb-1 text-dark text-uppercase">Atención Personalizada</h6>
+                  <h2 className="h6 fw-bold mb-1 text-dark text-uppercase">Atención Personalizada</h2>
                   <small className="text-muted d-block">Asesoría con expertos orfebres</small>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 3. CATÁLOGO DE PRODUCTOS (Tarjetas limpias con fotos de calidad verificadas) */}
+      {/* CATÁLOGO DE PRODUCTOS (Con dimensiones fijas en imágenes de tarjetas) */}
       <section id="catalogo" className="py-5 container">
         <div className="text-center mb-5">
           <span className="text-uppercase text-muted fw-bold small d-block mb-1" style={{ letterSpacing: '2px' }}>
@@ -109,14 +110,17 @@ export const Main = () => {
 
         <div className="row g-4">
           
-          {/* Producto 1: Cadena de Oro */}
+          {/* Producto 1 */}
           <div className="col-md-4">
             <div className="card h-100 border-0 shadow-sm rounded-3 overflow-hidden bg-white">
               <div className="position-relative bg-light" style={{ height: '260px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" 
-                  alt="Cadena de oro 18K"
+                  alt="Cadena de oro 18K tejido italiano"
                   className="w-100 h-100 object-fit-cover"
+                  width="800"
+                  height="260"
+                  loading="lazy"
                 />
                 <span 
                   className="position-absolute top-0 end-0 text-dark badge m-3 fw-bold rounded-2 px-3 py-2"
@@ -126,7 +130,7 @@ export const Main = () => {
                 </span>
               </div>
               <div className="card-body p-4 d-flex flex-column text-center">
-                <h5 className="card-title fw-bold text-dark mb-2">Cadena Tejido Italiano</h5>
+                <h3 className="card-title h5 fw-bold text-dark mb-2">Cadena Tejido Italiano</h3>
                 <p className="card-text text-muted small flex-grow-1">
                   Oro amarillo de 18K pulido con broche de seguridad reforzado.
                 </p>
@@ -143,14 +147,17 @@ export const Main = () => {
             </div>
           </div>
 
-          {/* Producto 2: Lingote de Oro */}
+          {/* Producto 2 */}
           <div className="col-md-4">
             <div className="card h-100 border-0 shadow-sm rounded-3 overflow-hidden bg-white">
               <div className="position-relative bg-light" style={{ height: '260px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=800&q=80" 
-                  alt="Lingote de Oro 24K"
+                  alt="Lingote de Oro 24K de inversión certificado"
                   className="w-100 h-100 object-fit-cover"
+                  width="800"
+                  height="260"
+                  loading="lazy"
                 />
                 <span 
                   className="position-absolute top-0 end-0 text-dark badge m-3 fw-bold rounded-2 px-3 py-2"
@@ -160,7 +167,7 @@ export const Main = () => {
                 </span>
               </div>
               <div className="card-body p-4 d-flex flex-column text-center">
-                <h5 className="card-title fw-bold text-dark mb-2">Lingote de Inversión 10g</h5>
+                <h3 className="card-title h5 fw-bold text-dark mb-2">Lingote de Inversión 10g</h3>
                 <p className="card-text text-muted small flex-grow-1">
                   Oro puro 999.9 sellado al vacío con número de serie certificado.
                 </p>
@@ -177,14 +184,17 @@ export const Main = () => {
             </div>
           </div>
 
-          {/* Producto 3: Anillo de Oro */}
+          {/* Producto 3 */}
           <div className="col-md-4">
             <div className="card h-100 border-0 shadow-sm rounded-3 overflow-hidden bg-white">
               <div className="position-relative bg-light" style={{ height: '260px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" 
-                  alt="Anillo de oro 18K"
+                  alt="Anillo Solitario Imperial en oro fino 18K"
                   className="w-100 h-100 object-fit-cover"
+                  width="800"
+                  height="260"
+                  loading="lazy"
                 />
                 <span 
                   className="position-absolute top-0 end-0 text-dark badge m-3 fw-bold rounded-2 px-3 py-2"
@@ -194,7 +204,7 @@ export const Main = () => {
                 </span>
               </div>
               <div className="card-body p-4 d-flex flex-column text-center">
-                <h5 className="card-title fw-bold text-dark mb-2">Anillo Solitario Imperial</h5>
+                <h3 className="card-title h5 fw-bold text-dark mb-2">Anillo Solitario Imperial</h3>
                 <p className="card-text text-muted small flex-grow-1">
                   Anillo en oro fino de 18K con acabado artesanal pulido.
                 </p>

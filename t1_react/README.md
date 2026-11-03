@@ -1,16 +1,30 @@
-# React + Vite
+# Rick and Morty Character Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación interactiva construida con **React** y **Vite** que consume la API oficial de *Rick and Morty*. Permite explorar la lista de personajes, filtrar por nombre en tiempo real, cambiar de página y ordenar los resultados de forma alfabética.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Funcionalidades
 
-## React Compiler
+- 🔍 **Búsqueda en tiempo real:** Filtra personajes por nombre conectándose a la API.
+- 📄 **Paginación dinámica:** Navega entre páginas de resultados usando los metadatos de la API.
+- ↕️ **Ordenamiento local:** Ordena los personajes de forma alfabética ascendente (A-Z) y descendente (Z-A).
+- 🎨 **Diseño adaptable:** Grid responsivo con tarjetas de presentación para cada personaje.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- [React](https://react.dev/)
+- [JavaScript (ES6+)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+- [Rick and Morty API](https://rickandmortyapi.com/)
+- HTML5 / CSS3 (Inline Styles)
+
+---
+
+## 🛠️ Instalación y Configuración
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone <URL_DE_TU_REPOSITORIO>
+   cd t1_react

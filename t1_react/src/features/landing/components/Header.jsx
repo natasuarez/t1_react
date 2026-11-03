@@ -14,8 +14,8 @@ export default function Header() {
 
       <nav className="navbar container py-3">
         {/* Marca / Logo */}
-        <NavLink className="navbar-brand d-flex align-items-center gap-2 m-0" to="/">
-          <span className="fs-3">👑</span>
+        <NavLink className="navbar-brand d-flex align-items-center gap-2 m-0 text-decoration-none" to="/">
+          <span className="fs-3" role="img" aria-label="Corona">👑</span>
           <div className="lh-1">
             <span 
               className="fw-bold fs-4 d-block text-dark" 
@@ -32,8 +32,8 @@ export default function Header() {
           </div>
         </NavLink>
 
-        {/* Enlaces directos sin botón colapsable */}
-        <ul className="navbar-nav flex-row gap-3 mb-0 ms-md-4 me-auto">
+        {/* Enlaces directos */}
+        <ul className="navbar-nav flex-row gap-3 mb-0 ms-md-4 me-auto list-unstyled">
           <li className="nav-item d-none d-lg-block">
             <NavLink className="nav-link text-dark fw-medium py-0" to="/cadenas">
               Cadenas y Lingotes
@@ -51,10 +51,8 @@ export default function Header() {
           </li>
         </ul>
 
-        {/* Buscador, Carrito e Iniciar Sesión directos en línea */}
+        {/* Acciones directas */}
         <div className="d-flex align-items-center gap-2 ms-auto">
-          
-          {/* Buscador */}
           <form className="d-none d-md-flex" role="search">
             <div className="input-group">
               <input
@@ -67,16 +65,16 @@ export default function Header() {
               <button 
                 className="btn btn-light border border-start-0 text-muted" 
                 type="submit"
+                aria-label="Ejecutar búsqueda"
               >
                 🔍
               </button>
             </div>
           </form>
 
-          {/* Botón Carrito */}
           <NavLink
             to="/carrito"
-            className="btn btn-outline-dark position-relative text-nowrap d-flex align-items-center gap-2 py-1 px-3"
+            className="btn btn-outline-dark position-relative text-nowrap d-flex align-items-center gap-2 py-1 px-3 text-decoration-none"
           >
             <span>🛒</span>
             <span className="small fw-semibold d-none d-sm-inline">Carrito</span>
@@ -88,23 +86,21 @@ export default function Header() {
             </span>
           </NavLink>
 
-          {/* Botón Iniciar Sesión DIRECTO */}
           <NavLink 
             to="/login" 
-            className="btn fw-bold text-dark text-nowrap border-0 shadow-sm py-1 px-3"
+            className="btn fw-bold text-dark text-nowrap border-0 shadow-sm py-1 px-3 text-decoration-none"
             style={{ backgroundColor: '#D4AF37' }}
           >
             Iniciar Sesión
           </NavLink>
-           <NavLink 
+
+          <NavLink 
             to="/rickandmorty" 
-            className="btn fw-bold text-dark text-nowrap border-0 shadow-sm py-1 px-3"
+            className="btn fw-bold text-dark text-nowrap border-0 shadow-sm py-1 px-3 text-decoration-none"
             style={{ backgroundColor: '#D4AF37' }}
           >
             Api
           </NavLink>
-
-
         </div>
       </nav>
     </header>

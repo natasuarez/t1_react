@@ -10,13 +10,13 @@ export const Footer = () => {
           {/* Marca / Logo Sencillo */}
           <div className="col-md-4 text-center text-md-start">
             <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
-              <span className="fs-5">👑</span>
+              <span className="fs-5" role="img" aria-label="Corona">👑</span>
               <span className="fw-bold text-dark fs-5 tracking-wide">AUREUM</span>
               <span className="text-muted small">| Fine Gold</span>
             </Link>
           </div>
 
-          {/* Menú de enlaces rápidos en una sola línea */}
+          {/* Menú de enlaces rápidos */}
           <div className="col-md-4 text-center">
             <ul className="list-inline mb-0 small">
               <li className="list-inline-item mx-2">
@@ -44,5 +44,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  )
+  ) 
 }
